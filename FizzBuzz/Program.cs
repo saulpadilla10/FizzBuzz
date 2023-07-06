@@ -1,47 +1,41 @@
 ﻿using System;
 
-
 public class NameSpace
-
-   
 {
-
     public string FizzBuzz(int num)
     {
-        var answer = "";
+        if (num % 3 == 0 && num % 5 == 0)
 
-        if (num % 3 == 0)
         {
-            answer = "fizz";
+            return "fizzbuzz";
+
         }
-        if (num % 5 == 0)
+
+        else if (num % 3 == 0)
         {
-            answer = "buzz";
+            return "fizz";
         }
-        else if (num % 3 == 0 || num % 5 == 0)
+        else if (num % 5 == 0)
         {
-            answer = "fizzbuzz";
+            return "buzz";
         }
+
         else
         {
-            answer = "nothing here";
+            return "nothing here";
+
         }
-
-
-        return answer;
-
     }
 
     public static void Main(string[] args)
     {
         NameSpace how = new NameSpace();
-
         string result = how.FizzBuzz(105);
 
         Console.WriteLine(result);
     }
-
 }
+
 
 
 
